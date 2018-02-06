@@ -20,7 +20,7 @@
 	<body>
 		<nav>
 			<div class="nav-wrapper  blue darken-3">&ensp;
-				<a href="#!" class="brand-logo"><i class="material-icons">developer_board</i>CoderBot > <b>Crea Attività</b></a>
+				<a href="#!" class="brand-logo"><i class="material-icons">developer_board</i>CoderBot > <b>Edit Activity</b></a>
 				<ul class="right hide-on-med-and-down">
 					<li><a href="sass.html"><i class="material-icons left">signal_wifi_4_bar</i> HomeWiFi</a></li>
 					<li><a href="badges.html"><i class="material-icons left">battery_full</i>60%</a></li>
@@ -33,9 +33,9 @@
     	<br>
       <ul class="tabs">
       	
-      	<li class="tab col s2">Edit view</li>
+      	<li class="tab col s2">Edit view:</li>
       	<li class="tab col s2"><a class="active" href="#design">Design</a></li>
-         <li class="tab col s2"><a href="#runtime">Runtime</a></li>
+         <li id="runtimeLi" class="tab col s2 disabled"><a href="#runtime">Runtime</a></li>
       </ul>
       <br>
     </div>
@@ -44,11 +44,11 @@
     	<div class="row">
     	<div class="col s6" style="background-color: #EEEEEE"> <h5>Preview</h5>
     		<div class="row"> 
-    			<div id="toolbarArea" class="col s12" style="height: 100px; background-color: #B0BEC5"> <p onclick="changeContext(1)" id="title1">TOOLBAR </p></div>
+    			<div onclick="changeContext(1)" id="toolbarArea" class="col s12" style="height: 100px; background-color: #B0BEC5"> <p onclick="changeContext(1)" id="title1">TOOLBAR </p></div>
     		</div>
     		<div class="row">
-    			<div id="sidebarArea" class="col s3" style="height: 600px; background-color: #FFE082 "> <p onclick="changeContext(2)" id="title2">SIDEBAR CONTROLS</p></div>
-    			<div id="codingArea" class="col s9" style="height: 600px; background-color: #81D4FA"> <p onclick="changeContext(3)" id="title3">CODING SPACE</p></div>
+    			<div onclick="changeContext(2)" id="sidebarArea" class="col s3" style="height: 600px; background-color: #FFE082 "> <p id="title2">SIDEBAR CONTROLS</p></div>
+    			<div onclick="changeContext(3)" id="codingArea" class="col s9" style="height: 600px; background-color: #81D4FA"> <p onclick="changeContext(3)" id="title3">CODING SPACE</p></div>
     		</div>
     	</div>
     	<div class="col s6" style="height:789px; background-color: #D1C4E9"> 
@@ -68,8 +68,9 @@
   <div id="inner-dropzone" class="dropzone">Drop toolbar elements here</div>
     <form action="#">
     <p>
-      <input type="checkbox" id="runtimeCheckbox" />
-      <label for="runtimeCheckbox">Allow Runtime View</label>
+      <input onclick="enableRuntime()" type="checkbox" id="runtimeCheckbox" />
+      <label for="runtimeCheckbox">Enable Runtime View</label>
+      <p style="display: none" id="runtimeHint">You can now customise how the Runtime View looks</p>
     </p>
     <p>
       <input type="checkbox" id="intermediateCheckbox" />

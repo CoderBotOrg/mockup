@@ -1,3 +1,16 @@
+code {
+  font-family: "Inconsolata"
+  size: 2em;
+}
+
+.tab {
+  font-weight: bold;
+}
+
+.disabled a{
+  color:#B0BEC5 !important;
+}
+
 #drag-1, #drag-2 {
   width: 25%;
   height: 100%;
