@@ -7,9 +7,15 @@
 		<!-- Compiled and minified CSS -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="editor.css">
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 		<!-- Compiled and minified JavaScript -->
+
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+		<script type="text/javascript" src="interact.min.js"></script>
+				<script type="text/javascript" src="editor.js"></script>
+
+
 	</head>
 	<body>
 		<nav>
@@ -27,23 +33,41 @@
     	<br>
       <ul class="tabs">
       	
-      	<li class="tab col s2">Visuale da modificare</li>
-      	<li class="tab col s1"><a class="active" href="#design">Design</a></li>
-         <li class="tab col s1"><a href="#runtime">Runtime</a></li>
+      	<li class="tab col s2">Edit view</li>
+      	<li class="tab col s2"><a class="active" href="#design">Design</a></li>
+         <li class="tab col s2"><a href="#runtime">Runtime</a></li>
       </ul>
+      <br>
     </div>
+
     <div id="design" class="col s12">
     	<div class="row">
-    	<div class="col s6"> Anteprima 
+    	<div class="col s6" style="background-color: #EEEEEE"> <h5>Preview</h5>
     		<div class="row"> 
-    			<div class="col s12" style="height: 100px; background-color: gray"> TOOLBAR </div>
+    			<div id="toolbarArea" class="col s12" style="height: 100px; background-color: #B0BEC5"> <p onclick="changeContext(1)" id="title1">TOOLBAR </p></div>
     		</div>
     		<div class="row">
-    			<div class="col s3" style="height: 600px; background-color: red "> SIDEBAR CONTROLS</div>
-    			<div class="col s9" style="height: 600px; background-color: yellow"> CODING SPACE</div>
+    			<div id="sidebarArea" class="col s3" style="height: 600px; background-color: #FFE082 "> <p onclick="changeContext(2)" id="title2">SIDEBAR CONTROLS</p></div>
+    			<div id="codingArea" class="col s9" style="height: 600px; background-color: #81D4FA"> <p onclick="changeContext(3)" id="title3">CODING SPACE</p></div>
     		</div>
     	</div>
-    	<div class="col s6"> Controlli Contestuali</div>
+    	<div class="col s6" style="background-color: #D1C4E9"> 
+    		<h5>Contextual Area</h5>
+    		<br>
+    		Selected Context: <code id="context">a</code> <br><br>
+
+    		<div id="contextToolbar">
+
+<div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
+<div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
+
+<div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
+<div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
+
+
+  <div id="inner-dropzone" class="dropzone">#inner-dropzone</div>
+</div>
+    	</div>
     	</div>
     	<br>
     </div>
