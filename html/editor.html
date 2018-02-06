@@ -51,21 +51,47 @@
     			<div id="codingArea" class="col s9" style="height: 600px; background-color: #81D4FA"> <p onclick="changeContext(3)" id="title3">CODING SPACE</p></div>
     		</div>
     	</div>
-    	<div class="col s6" style="background-color: #D1C4E9"> 
+    	<div class="col s6" style="height:789px; background-color: #D1C4E9"> 
     		<h5>Contextual Area</h5>
-    		<br>
+    		
     		Selected Context: <code id="context">a</code> <br><br>
 
     		<div id="contextToolbar">
 
-<div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
-<div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
+<div id="yes-drop" class="draggable drag-drop"> Save </div>
+<div id="yes-drop" class="draggable drag-drop"> Run</div>
 
-<div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
-<div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
+<div id="yes-drop" class="draggable drag-drop"> Simulate </div>
+<div id="yes-drop" class="draggable drag-drop"> Help </div>
 
 
-  <div id="inner-dropzone" class="dropzone">#inner-dropzone</div>
+  <div id="inner-dropzone" class="dropzone">Drop toolbar elements here</div>
+    <form action="#">
+    <p>
+      <input type="checkbox" id="runtimeCheckbox" />
+      <label for="runtimeCheckbox">Allow Runtime View</label>
+    </p>
+    <p>
+      <input type="checkbox" id="intermediateCheckbox" />
+      <label for="intermediateCheckbox">Allow Intermediate Saves</label>
+    </p>
+    <p>
+      <input type="checkbox" id="pyExportCheckbox" />
+      <label for="pyExportCheckbox">Python code export</label>
+    </p>
+    <p>
+      <input onclick="triggerEditorType()" type="checkbox" id="pyEditorCheckbox" />
+      <label for="pyEditorCheckbox">Python Editor</label>
+    </p>
+  </form>
+    <div id="editorSelect" class="input-field col s12" style="display:none">
+    <select>
+      <option value="1" selected>Beginner</option>
+      <option value="2">Intermediate</option>
+      <option value="3">Full API</option>
+    </select>
+    <label class="select-label">Editor Type</label>
+  </div>
 </div>
     	</div>
     	</div>

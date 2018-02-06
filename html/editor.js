@@ -1,4 +1,16 @@
 
+  $(document).ready(function() {
+    $('select').material_select();
+  });
+  
+  function triggerEditorType(){
+    if (document.getElementById("pyEditorCheckbox").checked) {
+      document.getElementById("editorSelect").style.display = ""
+    } else {
+      document.getElementById("editorSelect").style.display = "none"
+    }
+  } 
+
   function changeContext(target){
     console.log("fired")
     document.getElementById("title1").style.fontWeight = "normal"
