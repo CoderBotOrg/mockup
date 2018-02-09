@@ -1,0 +1,104 @@
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<!-- Compiled and minified CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+		<link rel="stylesheet" href="style.css">
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".brand-logo").sideNav();
+		})
+
+	</script>
+	<script src="settings.js"></script>
+	</head>
+	<body>
+	<ul id="slide-out" class="side-nav">&ensp;
+	 <li><a class="subheader">Account</a></li>
+	 <li><a class="waves-effect" href="#!"><i class="material-icons left">account_box</i>Luigi Beretta <span class="badge">TEACHER</span></a></li>
+	 <li><a><i class="material-icons left">exit_to_app</i>Logout</a></li>
+	 <li><div class="divider"></div></li>
+	 <li><a class="subheader">Project</a></li>
+    <li><a class="waves-effect" href="#!"><i class="material-icons left">add</i>New</a></li>
+    <li><a class="waves-effect" href="#!"><i class="material-icons left">open_in_new</i>Open</a></li>
+    <li><a class="waves-effect" href="#!"><i class="material-icons left">close</i>Close</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Other</a></li>
+    <li><a class="waves-effect" href="settings.html"><i class="material-icons left">settings</i>Settings</a></li>
+
+  </ul>
+
+		<nav>
+			<div class="nav-wrapper  blue darken-3">
+				<a href="#" data-activates="slide-out" class="brand-logo"><i class="material-icons">developer_board</i>CoderBot > Settings </a>
+
+
+
+				<ul class="right hide-on-med-and-down">
+					<li><a href="sass.html"><i class="material-icons left">signal_wifi_4_bar</i> HomeWiFi</a></li>
+					<li><a href="badges.html"><i class="material-icons left">battery_full</i>60%</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="row">
+			<div class="col l3 m2">
+			</div>
+			<div class="col l6 m8 s12">
+			<h3> General </h3>
+
+			  <form action="#">
+      <div class="row">
+        <div class="input-field col s12">
+          <input value="Coderbot di Antonio" autocomplete="off" id="Coderbot Name">
+          <label class="active" for="Coderbot Name">Coderbot Name</label>
+        </div>
+      </div>
+      <a class="waves-effect waves-light btn">Check for updates</a>
+<a class="waves-effect waves-light btn">Reset to factory</a>
+<br>
+<br>
+			<h3> Network Configuration</h3>
+
+			  <form action="#">
+    <p>
+      <input name="group1" type="radio" id="wifi1" />
+      <label for="test1">Use existing Wireless Network</label>
+      <br>
+      <div id="wifi1" style="display: none">
+      <div class="row">
+        <div class="input-field col s12">
+          <input autocomplete="new-password" id="SSID">
+          <label for="SSID">SSID</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input autocomplete="new-password" id="passphrase" type="password">
+          <label for="passphrase">Passphrase</label>
+        </div>
+      </div>
+
+    </p></div>
+    <p>
+      <input autocomplete="false" name="group1" type="radio" id="wifi2" />
+      <label for="test2">Ad-hoc coderbot network</label>
+      <div id="wifi2" style="display: none">
+      <br>
+      SSID: coderbot<br>
+      Passphrase: <code>coderb0t01</code>
+   </div>
+    </p>
+
+  </form>
+			</div>
+			<div class="col l3 m2">
+			</div>
+		</div>
+	</body>
+	</html>
