@@ -42,21 +42,17 @@
 
     <div id="design" class="col s12">
     	<div class="row">
-    	<div class="col s6" style="background-color: #EEEEEE"> <h5>Preview</h5>
+    	<div class="col s12" style="background-color: #EEEEEE"> <h5>Preview</h5>
     		<div class="row"> 
-    			<div onclick="changeContext(1)" id="toolbarArea" class="col s12" style="height: 100px; background-color: #B0BEC5"> <p onclick="changeContext(1)" id="title1">TOOLBAR </p></div>
+    			<div onclick="changeContext(1)" id="toolbarArea" class="col s12" style="height: 100px; background-color: #B0BEC5"> <p onclick="changeContext(1)" id="title1">TOOLBAR <i class="material-icons">edit_mode</i></p></div>
     		</div>
     		<div class="row">
-    			<div onclick="changeContext(2)" id="sidebarArea" class="col s3" style="height: 600px; background-color: #FFE082 "> <p id="title2">SIDEBAR CONTROLS</p></div>
-    			<div onclick="changeContext(3)" id="codingArea" class="col s9" style="height: 600px; background-color: #81D4FA"> <p onclick="changeContext(3)" id="title3">CODING SPACE</p></div>
-    		</div>
-    	</div>
-    	<div class="col s6" style="height:789px; background-color: #D1C4E9"> 
-    		<h5>Contextual Area</h5>
-    		
-    		Selected Context: <code id="context">a</code> <br><br>
+    			<div onclick="changeContext(2)" id="sidebarArea" class="col s3" style="height: 600px; background-color: #FFE082 "> <p id="title2">SIDEBAR CONTROLS<i class="material-icons">edit_mode</i></p></div>
+    			<div  id="codingArea" class="col s9" style="height: 600px; background-color: #81D4FA"> <p id="title3"></p>        <h5>Contextual Area</h5>
+        
+        Selected Context: <code id="context">a</code> <br><br>
 
-    		<div id="contextToolbar">
+        <div id="contextToolbar">
 
 <div id="yes-drop" class="draggable drag-drop"> Save </div>
 <div id="yes-drop" class="draggable drag-drop"> Run</div>
@@ -91,8 +87,10 @@
     </select>
     <label class="select-label">Editor Type</label>
   </div>
-</div>
+</div></div>
+    		</div>
     	</div>
+
     	</div>
     	<br>
     </div>
