@@ -15,12 +15,33 @@
 		<script type="text/javascript" src="interact.min.js"></script>
 				<script type="text/javascript" src="editor.js"></script>
 
-
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(".brand-logo").sideNav();
+      
+    })
+  </script>
 	</head>
 	<body>
+      <ul id="slide-out" class="side-nav">&ensp;
+           <li><a class="waves-effect" href="/"><i class="material-icons left">home</i>Home</a></li>
+
+   <li><a class="subheader">Account</a></li>
+   <li><a class="waves-effect" href="#!"><i class="material-icons left">account_box</i>Luigi Beretta <span class="badge">TEACHER</span></a></li>
+   <li><a><i class="material-icons left">exit_to_app</i>Logout</a></li>
+   <li><div class="divider"></div></li>
+   <li><a class="subheader">Project</a></li>
+    <li><a class="waves-effect" href="#!"><i class="material-icons left">add</i>New</a></li>
+    <li><a class="waves-effect" href="#!"><i class="material-icons left">open_in_new</i>Open</a></li>
+    <li><a class="waves-effect" href="#!"><i class="material-icons left">close</i>Close</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Other</a></li>
+    <li><a class="waves-effect" href="settings.html"><i class="material-icons left">settings</i>Settings</a></li>
+
+  </ul>
 		<nav>
 			<div class="nav-wrapper  blue darken-3">&ensp;
-				<a href="#!" class="brand-logo"><i class="material-icons">developer_board</i>CoderBot > <b>Edit Activity</b></a>
+        <a href="#" data-activates="slide-out" class="brand-logo"><i class="material-icons">developer_board</i>CoderBot <b>Editor</b></a>
 				<ul class="right hide-on-med-and-down">
 					<li><a href="sass.html"><i class="material-icons left">signal_wifi_4_bar</i> HomeWiFi</a></li>
 					<li><a href="badges.html"><i class="material-icons left">battery_full</i>60%</a></li>
