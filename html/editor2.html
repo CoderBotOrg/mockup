@@ -1,0 +1,143 @@
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<!-- Compiled and minified CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="editor.css">
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<!-- Compiled and minified JavaScript -->
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+		<script type="text/javascript" src="interact.min.js"></script>
+				<script type="text/javascript" src="editor.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(".brand-logo").sideNav();
+      
+    })
+  </script>
+	</head>
+	<body>
+      <ul id="slide-out" class="side-nav">&ensp;
+           <li><a class="waves-effect" href="/"><i class="material-icons left">home</i>Home</a></li>
+
+   <li><a class="subheader">Account</a></li>
+   <li><a class="waves-effect" href="#!"><i class="material-icons left">account_box</i>Luigi Beretta <span class="badge">TEACHER</span></a></li>
+   <li><a><i class="material-icons left">exit_to_app</i>Logout</a></li>
+   <li><div class="divider"></div></li>
+   <li><a class="subheader">Project</a></li>
+    <li><a class="waves-effect" href="#!"><i class="material-icons left">add</i>New</a></li>
+    <li><a class="waves-effect" href="#!"><i class="material-icons left">open_in_new</i>Open</a></li>
+    <li><a class="waves-effect" href="#!"><i class="material-icons left">close</i>Close</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Other</a></li>
+    <li><a class="waves-effect" href="settings.html"><i class="material-icons left">settings</i>Settings</a></li>
+
+  </ul>
+		<nav>
+			<div class="nav-wrapper  blue darken-3">&ensp;
+        <a href="#" data-activates="slide-out" class="brand-logo"><i class="material-icons">developer_board</i>CoderBot <b>Editor</b></a>
+				<ul class="right hide-on-med-and-down">
+					<li><a href="sass.html"><i class="material-icons left">signal_wifi_4_bar</i> HomeWiFi</a></li>
+					<li><a href="badges.html"><i class="material-icons left">battery_full</i>60%</a></li>
+					<li><a href="badges.html"><i class="material-icons left">account_box</i>Luigi Beretta</a></li>
+				</ul>
+			</div>
+		</nav>
+	<div class="row">
+    <div class="col s12">
+    	<br>
+      <ul class="tabs">
+      	
+      	<li class="tab col s2">Edit view:</li>
+      	<li class="tab col s2"><a class="active" href="#design">Design</a></li>
+         <li id="runtimeLi" class="tab col s2 disabled"><a href="#runtime">Runtime</a></li>
+      </ul>
+      <br>
+    </div>
+
+    <div id="design" class="col s12">
+    	<div class="row">
+    	<div class="col s12" style="background-color: #EEEEEE"> <h5>Preview</h5>
+    		<div class="row"> 
+    			<div onclick="changeContext(1)" id="toolbarArea" class="col s12" style="height: 100px; background-color: #B0BEC5"> <p onclick="changeContext(1)" id="title1">TOOLBAR <i class="material-icons">edit_mode</i></p></div>
+    		</div>
+    		<div class="row">
+    			<div onclick="changeContext(2)" id="sidebarArea" class="col s3" style="height: 600px; background-color: #FFE082 "> <p id="title2">SIDEBAR CONTROLS<i class="material-icons">edit_mode</i></p></div>
+    			<div  id="codingArea" class="col s9" style="height: 600px; background-color: #81D4FA"> <p id="title3"></p>        <h5>Contextual Area</h5>
+        
+        Selected Context: <code id="context">a</code> <br><br>
+
+        <div id="contextToolbar">
+
+<div id="yes-drop" class="draggable drag-drop"> Save </div>
+<div id="yes-drop" class="draggable drag-drop"> Run</div>
+
+<div id="yes-drop" class="draggable drag-drop"> Simulate </div>
+<div id="yes-drop" class="draggable drag-drop"> Help </div>
+  <div id="inner-dropzone" class="dropzone">Drop toolbar elements here</div>
+    <form action="#">
+    <p>
+      <input onclick="enableRuntime()" type="checkbox" id="runtimeCheckbox" />
+      <label for="runtimeCheckbox">Enable Runtime View</label>
+      <p style="display: none" id="runtimeHint">You can now customise how the Runtime View looks</p>
+    </p>
+    <p>
+      <input type="checkbox" id="intermediateCheckbox" />
+      <label for="intermediateCheckbox">Allow Intermediate Saves</label>
+    </p>
+    <p>
+      <input type="checkbox" id="pyExportCheckbox" />
+      <label for="pyExportCheckbox">Python code export</label>
+    </p>
+    <p>
+      <input onclick="triggerEditorType()" type="checkbox" id="pyEditorCheckbox" />
+      <label for="pyEditorCheckbox">Python Editor</label>
+    </p>
+  </form>
+    <div id="editorSelect" class="input-field col s12" style="display:none">
+    <select>
+      <option value="1" selected>Beginner</option>
+      <option value="2">Intermediate</option>
+      <option value="3">Full API</option>
+    </select>
+    <label class="select-label">Editor Type</label>
+  </div>
+</div></div>
+    		</div>
+    	</div>
+
+    	</div>
+    	<br>
+    </div>
+    <div id="runtime" class="col s12">
+  <div style="background-color: #81C784" class="resize-container">
+  <div id="drag1" class="resize-drag">
+     Element 1
+  </div>
+  <div id="drag2" class="resize-drag">
+     Element 2
+  </div>
+    <div id="drag3" class="resize-drag">
+     Element 3
+  </div>
+    <div id="drag4" class="resize-drag">
+     Element 4
+  </div>
+    <div id="drag5" class="resize-drag">
+     Element 5
+  </div>
+    <div id="drag6" class="resize-drag">
+     Element 6
+  </div>
+</div>
+    	<br>
+    </div>
+  </div>
+	</body>
+</html>
