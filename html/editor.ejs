@@ -32,16 +32,16 @@
 					<div class="tabs-vertical">
 						<ul class="tabs">
 							<li class="tab">
-								<a href="#general">General</a>
+								<a href="#general">Generali</a>
 							</li>
 							<li class="tab">
-								<a class="active" href="#toolbar">Toolbar</a>
+								<a class="active" href="#toolbar">Barra degli Strumenti</a>
 							</li>
 							<li class="tab">
-								<a href="#command">Command palette</a>
+								<a href="#command">Palette dei Comandi </a>
 							</li>
 							<li class="tab">
-								<a href="#runtime">Runtime View</a>
+								<a href="#runtime">Vista in Esecuzione</a>
 							</li>
 						</ul>
 					</div>
@@ -56,37 +56,37 @@
 				</div>
 				
 				<div id="toolbar" class="tab-content active">
-					<div id="yes-drop" class="draggable drag-drop"> Save </div>
-					<div id="yes-drop" class="draggable drag-drop"> Run</div>
-					<div id="yes-drop" class="draggable drag-drop"> Simulate </div>
-					<div id="yes-drop" class="draggable drag-drop"> Help </div>
-					<div id="inner-dropzone" class="dropzone">Drop toolbar elements here</div>
+					<div id="yes-drop" class="draggable drag-drop"> Salva </div>
+					<div id="yes-drop" class="draggable drag-drop"> Esegui</div>
+					<div id="yes-drop" class="draggable drag-drop"> Simula </div>
+					<div id="yes-drop" class="draggable drag-drop"> Aiuto </div>
+					<div id="inner-dropzone" class="dropzone">Trascina qui gli elementi da visualizzare nella barra superiore</div>
 					<form action="#">
 						<p>
 							<input onclick="enableRuntime()" type="checkbox" id="runtimeCheckbox" />
-							<label for="runtimeCheckbox">Enable Runtime View</label>
+							<label for="runtimeCheckbox">Abilita Vista in Esecuzione</label>
 							<p style="display: none" id="runtimeHint">You can now customise how the Runtime View looks</p>
 						</p>
 						<p>
 							<input type="checkbox" id="intermediateCheckbox" />
-							<label for="intermediateCheckbox">Allow Intermediate Saves</label>
+							<label for="intermediateCheckbox">Permetti salvataggi intermedi (git like "commit")</label>
 						</p>
 						<p>
 							<input type="checkbox" id="pyExportCheckbox" />
-							<label for="pyExportCheckbox">Python code export</label>
+							<label for="pyExportCheckbox">Permetti di visualizzare il codice Python generato</label>
 						</p>
 						<p>
 							<input onclick="triggerEditorType()" type="checkbox" id="pyEditorCheckbox" />
-							<label for="pyEditorCheckbox">Python Editor</label>
+							<label for="pyEditorCheckbox">Editor Python</label>
 						</p>
 					</form>
 					<div id="editorSelect" class="input-field col s12" style="display:none">
 						<select>
-							<option value="1" selected>Beginner</option>
-							<option value="2">Intermediate</option>
-							<option value="3">Full API</option>
+							<option value="1" selected>Principiante</option>
+							<option value="2">Intermedio</option>
+							<option value="3">Controllo completo sulle API</option>
 						</select>
-						<label class="select-label">Editor Type</label>
+						<label class="select-label">Livello dell'Editor</label>
 					</div>
 					
 					
