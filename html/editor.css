@@ -118,7 +118,14 @@ label{
   
   
 }
+.tab-content {
+  font-size: 22px;
+}
 
+.tab-content form label{
+  font-size: 22px;
+
+}
 .tabs-vertical .tabs {
   height: auto;
   -ms-flex-direction: column;
@@ -149,18 +156,6 @@ label{
 .tabs-vertical > .tab-content .active {
   display: block;
 }
-
-html, body {
-  margin: 0;
-  padding: 0;
-  position: relative;
-  
-  min-height: 100%;
-  font-size: 20px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-}
-
 
 h1 {
   color: #FF3F00;

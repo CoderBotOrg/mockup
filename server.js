@@ -11,16 +11,21 @@ app.set('views', './html')
 app.use('/', express.static('html'))
 
 app.get('/', function (req, res) {
-  res.render('index')
+  res.render('index', {
+  	title: "Index"
+  })
 })
 
 app.get('/editor', function (req, res) {
-  res.render('editor')
+  res.render('editor', {
+  	title: "Editor"
+  })
 })
 
 app.get('/settings', function (req, res) {
-  res.render('settings')
+  res.render('settings', {
+  	title: "Settings"
+  })
 })
-
 
 app.listen(port);
