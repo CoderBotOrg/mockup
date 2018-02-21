@@ -1,0 +1,50 @@
+<html>
+	<title>Home</title>
+	<head>
+		<% include head.ejs %>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".brand-logo").sideNav();
+				$('.modal').modal();
+			})
+		</script>
+	</head>
+	<body>
+		<% include sidemenu.ejs %>
+		<% include navbar.ejs %>
+		<div class="row">
+			<div class="col s12">
+				<br><center><h3>Benvenuto in CoderBot</h3></center>
+				<br>
+				<center><h5>Scegli un'azione per iniziare</h5></center>
+				<br>
+				<div class="row"><center>
+					<div class="col s12">
+						
+						<a href="#modal1" class="waves-effect waves-light btn-large indigo modal-trigger"><i class="material-icons left">open_in_new</i>Apri Attività</a><br><br>
+						<a href="editor" class="waves-effect waves-light btn-large indigo"><i class="material-icons left">add</i>Nuova Attività</a><br><br>
+						<a href="settings" class="waves-effect waves-light btn-large indigo"><i class="material-icons left">settings</i>Impostazioni</a><br><br>
+						<a href="settings" class="waves-effect waves-light btn-large indigo"><i class="material-icons left">help</i>Aiuto</a><br><br>
+						<!-- Modal Trigger -->
+						<!-- Modal Structure -->
+						<div id="modal1" class="modal">
+							<div class="modal-content">
+								<h4>Apri Attività</h4>
+								<p>Selezionando un'attività, verrà eseguita in modalità studente. Puoi modificarla cliccando sull'icona <i class="material-icons">edit</i></p>
+							</div>
+							<div class="collection">
+								<a href="#!" class="collection-item">Movimento <i class="material-icons left">edit</i></a>
+								<a href="#!" class="collection-item active">Lezione 3<i class="material-icons left">edit</i></a>
+								<a href="#!" class="collection-item">Sensoristica e Riconoscimento QR Codes<i class="material-icons left">edit</i></a>
+								<a href="#!" class="collection-item">Lezione sui Cicli<i class="material-icons left">edit</i></a>
+							</div>
+						</div>
+						
+					</div>
+					</center>
+				</div>
+				
+			</div>
+		</div>
+	</body>
+</html>
