@@ -5,18 +5,19 @@
 		<script type="text/javascript" src="interact.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.6.1/Sortable.min.js"></script>
 		<script type="text/javascript" src="editor.js"></script>
-
 		<script type="text/javascript">
 			$(document).ready(function() {
+				    Materialize.updateTextFields();
+
 			$(".brand-logo").sideNav();
 			// Editable list
-	var editableList = Sortable.create(editable, {
+		var editableList = Sortable.create(editable, {
 		filter: '.js-remove',
 		onFilter: function (evt) {
 			var el = editableList.closest(evt.item); // get dragged item
 			el && el.parentNode.removeChild(el);
 		}
-	});
+		});
 			
 			})
 		</script>
@@ -24,12 +25,11 @@
 	<body>
 		<% include sidemenu.ejs %>
 		<% include navbar.ejs %>
-		<br><br><br>
+		<br>
 		<div class="row">
-			
-			<div class="col s3">
+			<div class="col s12">
 				<div class="row">
-					<div class="tabs-vertical">
+					<div class="tabs">
 						<ul class="tabs">
 							<li class="tab">
 								<a href="#general">Generali</a>
@@ -47,11 +47,25 @@
 					</div>
 				</div>
 			</div>
-			<div class="col s6">
+		</div>
+
+
+    <div class="fixed-action-btn">
+    <a class="btn-floating btn-large blue"> <b> SALVA </b>
+    </a>
+  </div>
+        		<div class="row">
+			<div class="col s12">
 				
 				<div id="general" class="tab-content">
 					
-					<img src='https://images.unsplash.com/photo-1448229583641-6739e82237d4?ixlib=<rb-0></rb-0>.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=c3828b93e60d1367c4f5bdb62964e519'>
+					<div class="row">
+						<div class="input-field col s6">
+							<input value="Progetto" id="first_name2" type="text" class="validate">
+							<label class="active" for="first_name2">Nome Progetto</label>
+						</div>
+					</div>
+					
 					
 				</div>
 				
@@ -62,11 +76,6 @@
 					<div id="yes-drop" class="draggable drag-drop"> Aiuto </div>
 					<div id="inner-dropzone" class="dropzone">Trascina qui gli elementi da visualizzare nella barra superiore</div>
 					<form action="#">
-						<p>
-							<input onclick="enableRuntime()" type="checkbox" id="runtimeCheckbox" />
-							<label for="runtimeCheckbox">Abilita Vista in Esecuzione</label>
-							<p style="display: none" id="runtimeHint">You can now customise how the Runtime View looks</p>
-						</p>
 						<p>
 							<input type="checkbox" id="intermediateCheckbox" />
 							<label for="intermediateCheckbox">Permetti salvataggi intermedi (git like "commit")</label>
@@ -93,28 +102,21 @@
 				</div>
 				
 				<div id="command" class="tab-content">
-				 <div id="filter" style="margin-left: 30px">
-			<div><div data-force="5" style="color:black" class="layer title title_xl">Available Commands</div></div>
-
-			<div style="margin-top: -8px; margin-left: 10px" class="block__list block__list_words">
-				<ul id="editable">
-					<li>Logic<i class="js-remove">✖</i></li>
-					<li>Loops<i class="js-remove">✖</i></li>
-					<li>Math<i class="js-remove">✖</i></li>
-					<li>Text<i class="js-remove">✖</i></li>
-				</ul>
-
-				<button id="addUser">Add</button>
-			</div>
-		</div>
+					<a href="workspace_factory/index.html" target="_blank">Workspace Editor</a>
 				</div>
-
 				<div id="runtime" class="tab-content">
 					Runtime settings
-					<img src='https://images.unsplash.com/photo-1517318733864-ea5259b95ad3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=0a4f56c7868d8982ebf756954baf6338'>
+					<form action="#">
+						<p>
+							<input onclick="enableRuntime()" type="checkbox" id="runtimeCheckbox" />
+							<label for="runtimeCheckbox">Abilita Vista in Esecuzione</label>
+							<p style="display: none" id="runtimeHint">You can now customise how the Runtime View looks</p>
+						</p>
+					</form>
 				</div>
 			</div>
 			<div class="col s1"></div>
 		</div>
+	</div>
 	</body>
 </html>

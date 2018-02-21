@@ -105,6 +105,13 @@ label{
   height: 840px;
 }
 
+label {
+  font-size: 20px !important;
+}
+input {
+  font-size: 20px !important;
+}
+
 .tabs .tab a {
   font-size: 20px;
   
