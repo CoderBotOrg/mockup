@@ -58,17 +58,40 @@
 					
 					<div class="row">
 						<div class="col s6">
+							<h5> Dati Progetto </h5>
+							<br>
 							<div class="input-field">
 								<input value="Progetto 1" id="first_name2" type="text" class="validate">
-								<label class="active" for="first_name2">Nome Progetto</label>
+								<label class="active" for="first_name2">Nome</label>
 							</div>
 							<div class="input-field ">
-								<input id="description" type="text" class="validate">
-								<label for="description">Descrizione Progetto</label>
+								<textarea id="textarea1" class="materialize-textarea"></textarea>
+         				 	<label for="textarea1">Descrizione</label>
 							</div>
+							<div  class="input-field">
+										<select>
+											<option value="1" selected>Visuale Esecuzione</option>
+											<option value="2">Editor di Blocchi</option>
+											<option value="3">Editor Python</option>
+										</select>
+										<label class="select-label">Vista Predefinita</label>
+									</div>
+									<br>
+							<h5> Tipografia </h5>
+							<br>
+							<div  class="input-field">
+										<select>
+											<option value="1" selected>Piccolo</option>
+											<option value="2">Medio</option>
+											<option value="3">Grande</option>
+										</select>
+										<label class="select-label">Grandezza Testo</label>
+									</div>
 						</div>
 
 						<div class="col s6">
+							<h5> Funzioni </h5>
+							<br>
 							<form action="#">
 								<p>
 									<input onclick="triggerEditorType()" type="checkbox" id="pyEditorCheckbox" />
@@ -94,6 +117,17 @@
 											<option value="6">Ogni Ora</option>
 										</select>
 										<label class="select-label">Aggiorna cronologia modifiche</label>
+									</div>
+									<div  class="input-field">
+										<select>
+											<option value="1" selected>Mai (Disabilitato)</option>
+											<option value="2">Prima di ogni esecuzione</option>
+											<option value="3">Ogni Minuto</option>
+											<option value="4">Ogni 5 Minuti</option>
+											<option value="5">Ogni 30 Minuti</option>
+											<option value="6">Ogni Ora</option>
+										</select>
+										<label class="select-label">Salva automaticamente</label>
 									</div>
 								</p>
 								<p>
