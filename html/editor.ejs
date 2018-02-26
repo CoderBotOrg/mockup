@@ -7,8 +7,7 @@
 		<script type="text/javascript" src="editor.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
-				    Materialize.updateTextFields();
-
+				Materialize.updateTextFields();
 			$(".brand-logo").sideNav();
 			// Editable list
 		var editableList = Sortable.create(editable, {
@@ -32,10 +31,10 @@
 					<div class="tabs">
 						<ul class="tabs">
 							<li class="tab">
-								<a href="#general">Generali</a>
+								<a class="active" href="#general">Generali</a>
 							</li>
 							<li class="tab">
-								<a class="active" href="#toolbar">Barra degli Strumenti</a>
+								<a  href="#toolbar">Barra degli Strumenti</a>
 							</li>
 							<li class="tab">
 								<a href="#command">Palette dei Comandi </a>
@@ -48,21 +47,65 @@
 				</div>
 			</div>
 		</div>
-
-
-    <div class="fixed-action-btn">
-    <a class="btn-floating btn-large blue"> <b> SALVA </b>
-    </a>
-  </div>
-        		<div class="row">
+		<div class="fixed-action-btn">
+			<a class="btn-floating btn-large blue"> <b> SALVA </b>
+			</a>
+		</div>
+		<div class="row">
 			<div class="col s12">
 				
 				<div id="general" class="tab-content">
 					
 					<div class="row">
-						<div class="input-field col s6">
-							<input value="Progetto" id="first_name2" type="text" class="validate">
-							<label class="active" for="first_name2">Nome Progetto</label>
+						<div class="col s6">
+							<div class="input-field">
+								<input value="Progetto 1" id="first_name2" type="text" class="validate">
+								<label class="active" for="first_name2">Nome Progetto</label>
+							</div>
+							<div class="input-field ">
+								<input id="description" type="text" class="validate">
+								<label for="description">Descrizione Progetto</label>
+							</div>
+						</div>
+
+						<div class="col s6">
+							<form action="#">
+								<p>
+									<input onclick="triggerEditorType()" type="checkbox" id="pyEditorCheckbox" />
+									<label for="pyEditorCheckbox">Editor Python</label>
+									<div id="editorSelect" class="input-field" style="display:none">
+										<select>
+											<option value="1" selected>Principiante</option>
+											<option value="2">Intermedio</option>
+											<option value="3">Controllo completo sulle API</option>
+										</select>
+										<label class="select-label">Livello dell'Editor</label>
+									</div>
+								</p>
+								<p>
+									<input type="checkbox" id="intermediateCheckbox" />
+									<div  class="input-field">
+										<select>
+											<option value="1" selected>Mai (Disabilitato)</option>
+											<option value="2">Prima di ogni esecuzione</option>
+											<option value="3">Ogni Minuto</option>
+											<option value="4">Ogni 5 Minuti</option>
+											<option value="5">Ogni 30 Minuti</option>
+											<option value="6">Ogni Ora</option>
+										</select>
+										<label class="select-label">Aggiorna cronologia modifiche</label>
+									</div>
+								</p>
+								<p>
+									<input type="checkbox" id="pyExportCheckbox" />
+									<label for="pyExportCheckbox">Permetti di visualizzare il codice Python generato</label>
+								</p>
+								<p>
+									<input type="checkbox" id="pyEditCheckbox" />
+									<label for="pyEditCheckbox">Permetti di modificare il codice Python generato</label>
+								</p>
+								
+							</form>
 						</div>
 					</div>
 					
@@ -70,47 +113,23 @@
 				</div>
 				
 				<div id="toolbar" class="tab-content active">
-					<div id="yes-drop" class="draggable drag-drop"> Salva </div>
-					<div id="yes-drop" class="draggable drag-drop"> Esegui</div>
-					<div id="yes-drop" class="draggable drag-drop"> Simula </div>
-					<div id="yes-drop" class="draggable drag-drop"> Aiuto </div>
-					<div id="inner-dropzone" class="dropzone">Trascina qui gli elementi da visualizzare nella barra superiore</div>
-					<form action="#">
-						<p>
-							<input type="checkbox" id="intermediateCheckbox" />
-							<label for="intermediateCheckbox">Permetti salvataggi intermedi (git like "commit")</label>
-						</p>
-						<p>
-							<input type="checkbox" id="pyExportCheckbox" />
-							<label for="pyExportCheckbox">Permetti di visualizzare il codice Python generato</label>
-						</p>
-						<p>
-							<input onclick="triggerEditorType()" type="checkbox" id="pyEditorCheckbox" />
-							<label for="pyEditorCheckbox">Editor Python</label>
-						</p>
-					</form>
-					<div id="editorSelect" class="input-field col s12" style="display:none">
-						<select>
-							<option value="1" selected>Principiante</option>
-							<option value="2">Intermedio</option>
-							<option value="3">Controllo completo sulle API</option>
-						</select>
-						<label class="select-label">Livello dell'Editor</label>
+					<div class="col s6">
+						<div id="yes-drop" class="draggable drag-drop"> Salva </div>
+						<div id="yes-drop" class="draggable drag-drop"> Esegui</div>
+						<div id="yes-drop" class="draggable drag-drop"> Simula </div>
+						<div id="yes-drop" class="draggable drag-drop"> Aiuto </div>
+						<div id="inner-dropzone" class="dropzone">Trascina qui gli elementi da visualizzare nella barra superiore</div>
 					</div>
-					
-					
 				</div>
 				
 				<div id="command" class="tab-content">
-					<a href="workspace_factory/index.html" target="_blank">Workspace Editor</a>
+					Palette Comandi
 				</div>
 				<div id="runtime" class="tab-content">
-					Runtime settings
 					<form action="#">
 						<p>
 							<input onclick="enableRuntime()" type="checkbox" id="runtimeCheckbox" />
 							<label for="runtimeCheckbox">Abilita Vista in Esecuzione</label>
-							<p style="display: none" id="runtimeHint">You can now customise how the Runtime View looks</p>
 						</p>
 					</form>
 				</div>
@@ -118,5 +137,5 @@
 			<div class="col s1"></div>
 		</div>
 	</div>
-	</body>
+</body>
 </html>
