@@ -52,8 +52,9 @@ code {
   border-radius: 4px;
   margin: 10px auto 30px;
   padding: 10px;
-  width: 100%;
+  width: 95%;
   transition: background-color 0.3s;
+  height: 30px;
 }
 
 .drop-active {
@@ -69,7 +70,7 @@ code {
 .drag-drop {
   display: inline-block;
   min-width: 40px;
-  padding: 2em 0.5em;
+  padding: 1em 1em;
 
   color: #fff;
   background-color: #29e;
@@ -99,7 +100,7 @@ label{
   padding: 20px;
   margin: 30px 20px;
 
-  width: 120px;
+  width: 90%;
 
   /* This makes things *much* easier */
   box-sizing: border-box;

@@ -124,56 +124,55 @@
 						</div>
 						<div class="col s6">
 							<h5> Funzioni </h5>
-								Visuali disponibili:
-								<p>
-									<input type="checkbox" id="featureEditorPython" />
-									<label for="featureEditorPython">Editor Python</label>
-								</p>
-								<p>
-									<input type="checkbox" id="featureEditorBlockly"  checked="true"/>
-									<label for="featureEditorBlockly">Editor a Blocchi</label>
-								</p>
-																<p>
-									<input type="checkbox" id="featureRuntimeView" />
-									<label for="featureRuntimeView">Visuale in Esecuzione</label>
-								</p>
+							Visuali disponibili:
+							<p>
+								<input type="checkbox" id="featureEditorPython" />
+								<label for="featureEditorPython">Editor Python</label>
+							</p>
+							<p>
+								<input type="checkbox" id="featureEditorBlockly"  checked="true"/>
+								<label for="featureEditorBlockly">Editor a Blocchi</label>
+							</p>
+							<p>
+								<input type="checkbox" id="featureRuntimeView" />
+								<label for="featureRuntimeView">Visuale in Esecuzione</label>
+							</p>
+							<br>
+							<p>
+								<input type="checkbox" id="allowEditsNavigation" />
+								<label for="allowEditsNavigation">Permetti navigazione nella cronologia modifiche (Funzioni <b>Annulla</b> e <b>Ripeti</b>)</label>
+							</p>
+							<p>
+								<input type="checkbox" id="showRuntimeWhenStart" />
+								<label for="showRuntimeWhenStart">Passa alla Visuale Esecuzione ogni volta che viene eseguito il programma.</label>
+							</p>
+							<div class="row">
+								Salva automaticamente
+								<div class="input-field inline">
+									<select>
+										<option value="1" selected>Mai (Disabilitato)</option>
+										<option value="2">Prima di ogni esecuzione</option>
+										<option value="3">Ogni Minuto</option>
+										<option value="4">Ogni 5 Minuti</option>
+										<option value="5">Ogni 30 Minuti</option>
+										<option value="6">Ogni Ora</option>
+									</select>
+									<label class="select-label"></label>
+								</div>
 								<br>
-
+								Aggiorna cronologia modifiche
+								<div class="input-field inline">
+									<select>
+										<option value="1" selected>Mai (Disabilitato)</option>
+										<option value="2">Prima di ogni esecuzione</option>
+										<option value="3">Ogni Minuto</option>
+										<option value="4">Ogni 5 Minuti</option>
+										<option value="5">Ogni 30 Minuti</option>
+										<option value="6">Ogni Ora</option>
+									</select>
+									<label class="select-label"></label>
+								</div></div>
 								<p>
-									<input type="checkbox" id="allowEditsNavigation" />
-									<label for="allowEditsNavigation">Permetti navigazione nella cronologia modifiche (Funzioni <b>Annulla</b> e <b>Ripeti</b>)</label>
-								</p>
-								<p>
-									<input type="checkbox" id="showRuntimeWhenStart" />
-									<label for="showRuntimeWhenStart">Passa alla Visuale Esecuzione ogni volta che viene eseguito il programma.</label>
-								</p>
-								<div class="row">
-										Salva automaticamente
-										<div class="input-field inline">
-											<select>
-												<option value="1" selected>Mai (Disabilitato)</option>
-												<option value="2">Prima di ogni esecuzione</option>
-												<option value="3">Ogni Minuto</option>
-												<option value="4">Ogni 5 Minuti</option>
-												<option value="5">Ogni 30 Minuti</option>
-												<option value="6">Ogni Ora</option>
-											</select>
-											<label class="select-label"></label>
-										</div>
-									<br>
-									Aggiorna cronologia modifiche
-									<div class="input-field inline">
-										<select>
-											<option value="1" selected>Mai (Disabilitato)</option>
-											<option value="2">Prima di ogni esecuzione</option>
-											<option value="3">Ogni Minuto</option>
-											<option value="4">Ogni 5 Minuti</option>
-											<option value="5">Ogni 30 Minuti</option>
-											<option value="6">Ogni Ora</option>
-										</select>
-										<label class="select-label"></label>
-									</div></div>
-																	<p>
 									<input type="checkbox" id="pyExportCheckbox" />
 									<label for="pyExportCheckbox">Permetti di <b>visualizzare</b> il codice Python generato</label>
 								</p>
@@ -182,64 +181,85 @@
 									<label for="allowPythonEdit">Permetti di <b>modificare</b> il codice Python generato</label>
 								</p>
 								<br>
-							<h5> Editor Python </h5>
-							
-							<form action="#">
-								<div class="row">
-									Editor Python
-									<div class="input-field inline">
-										<select>
-											<option value="1" selected>Disabilitato</option>
-											<option value="2">Base</option>
-											<option value="3">Intermedio</option>
-											<option value="4">Completo</option>
-										</select>
-										<label class="select-label"></label>
-									</div>
-								</div>
-								<div class="row">
-									Tema Editor
-									<div class="input-field inline">
-										<select>
-											<option value="1" selected>Chiaro</option>
-											<option value="2">Monokai</option>
-											<option value="3">Dracula</option>
-											
-										</select>
-										<label class="select-label"></label>
-									</div>
-								</div>
-								<p>
-									
-									
-								</p>
-
+								<h5> Editor Python </h5>
 								
-							</form>
+								<form action="#">
+									<div class="row">
+										Editor Python
+										<div class="input-field inline">
+											<select>
+												<option value="1" selected>Disabilitato</option>
+												<option value="2">Base</option>
+												<option value="3">Intermedio</option>
+												<option value="4">Completo</option>
+											</select>
+											<label class="select-label"></label>
+										</div>
+									</div>
+									<div class="row">
+										Tema Editor
+										<div class="input-field inline">
+											<select>
+												<option value="1" selected>Chiaro</option>
+												<option value="2">Monokai</option>
+												<option value="3">Dracula</option>
+												
+											</select>
+											<label class="select-label"></label>
+										</div>
+									</div>
+									<p>
+										
+										
+									</p>
+									
+								</form>
+							</div>
 						</div>
+						
+						
 					</div>
 					
+					<div id="toolbar" class="tab-content active">
+						<div id="yes-drop" class="draggable drag-drop"> <i class="material-icons">menu</i> </div>
+						<div id="yes-drop" class="draggable drag-drop"> Salva </div>
+						<div id="yes-drop" class="draggable drag-drop"> Esegui</div>
+						<div id="yes-drop" class="draggable drag-drop"> Simula </div>
+						<div id="yes-drop" class="draggable drag-drop"> Aiuto </div>
+						<div id="yes-drop" class="draggable drag-drop"> Cambia Visuale </div>
+						<div id="inner-dropzone" class="dropzone">Trascina qui gli elementi da visualizzare nella barra superiore</div>
+					</div>
 					
+					<div id="command" class="tab-content">
+						Palette Comandi
+					</div>
+					<div id="runtime" class="tab-content">
+						<div class="col s3">
+							<h5> Widget disponibili </h5>
+							<div class="resize-drag">
+								Webcam <i class="material-icons right">edit</i>
+							</div>
+							<div style="background-color: red"class="resize-drag">
+								Valori Sensori <i class="material-icons right">edit</i>
+							</div>
+							<div style="background-color: black" class="resize-drag">
+								Console <i class="material-icons right">edit</i>
+							</div>
+							<div class="resize-drag">
+								Controlli Motori <i class="material-icons right">edit</i>
+							</div>
+						</div>
+
+						<div style="background-color: #eeeeee ;   border: dashed 4px transparent; border-radius: 4px;   border-color: #aaa; "class="col s9">
+						<div class="resize-container">
+							<br><br><br>
+							    <center><p class="flow-text">Questa è la visuale in esecuzione. Trascina qui gli elementi disponibili.</p></center>
+						</div>
+					</div>
+					</div>
 				</div>
-				
-				<div id="toolbar" class="tab-content active">
-					toolbar
-				</div>
-				
-				<div id="command" class="tab-content">
-					Palette Comandi
-				</div>
-				<div id="runtime" class="tab-content">
-					<form action="#">
-						<p>
-							<input onclick="enableRuntime()" type="checkbox" id="runtimeCheckbox" />
-							<label for="runtimeCheckbox">Abilita Vista in Esecuzione</label>
-						</p>
-					</form>
-				</div>
+				<div class="col s1"></div>
 			</div>
-			<div class="col s1"></div>
 		</div>
-	</div>
-</body>
+	</body>
 </html>
