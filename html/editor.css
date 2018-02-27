@@ -1,3 +1,9 @@
+h1, h2, h3, h4, h5 {
+  font-weight: bold;
+}
+.input-field label {
+  color: #616161;
+}
 code {
   font-family: "Inconsolata"
   size: 2em;

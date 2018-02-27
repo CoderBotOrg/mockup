@@ -20,6 +20,7 @@
 			
 			})
 		</script>
+		<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Source+Sans+Pro|Ubuntu" rel="stylesheet">
 	</head>
 	<body>
 		<% include sidemenu.ejs %>
@@ -66,48 +67,93 @@
 							</div>
 							<div class="input-field ">
 								<textarea id="textarea1" class="materialize-textarea"></textarea>
-         				 	<label for="textarea1">Descrizione</label>
+								<label for="textarea1">Descrizione</label>
 							</div>
-							<div  class="input-field">
-										<select>
-											<option value="1" selected>Visuale Esecuzione</option>
-											<option value="2">Editor di Blocchi</option>
-											<option value="3">Editor Python</option>
-										</select>
-										<label class="select-label">Vista Predefinita</label>
-									</div>
-									<br>
+							Vista predefinita:
+							<div  class="input-field inline">
+								<select>
+									<option value="1" selected>Visuale Esecuzione</option>
+									<option value="2" >Editor di Blocchi</option>
+									<option value="3" disabled>Editor Python</option>
+								</select>
+								<label class="select-label"></label>
+							</div>
+							<br>
 							<h5> Tipografia </h5>
 							<br>
-							<div  class="input-field">
-										<select>
-											<option value="1" selected>Piccolo</option>
-											<option value="2">Medio</option>
-											<option value="3">Grande</option>
-										</select>
-										<label class="select-label">Grandezza Testo</label>
-									</div>
+							<div class="row">
+								Grandezza Testo:
+								<div  class="input-field inline">
+									<select>
+										<option value="1" selected>Piccolo</option>
+										<option value="2">Medio</option>
+										<option value="3">Grande</option>
+									</select>
+									<label class="select-label"></label>
+								</div>
+							</div>
+							<div class="row">
+								
+								Carattere tipografico (<i>font</i>) dell'interfaccia:
+								<form action="#">
+									<p>
+										<input name="group1" type="radio" id="test1" />
+										<label style="font-family: 'Helvetica Neue'" for="test1">Helvetica Neue</label>
+									</p>
+									<p>
+										<input name="group1" type="radio" id="test2" />
+										<label style="font-family: 'Open Sans', sans-serif;" for="test2">Open Sans</label>
+									</p>
+									<p>
+										<input class="with-gap" name="group1" type="radio" id="test3"  />
+										<label style="font-family: 'Lato', sans-serif;" for="test3">Lato</label>
+									</p>
+									<p>
+										<input name="group1" type="radio" id="test4" />
+										<label style="font-family: 'Ubuntu', sans-serif;" for="test4">Ubuntu</label>
+									</p>
+									<p>
+										<input name="group1" type="radio" id="test5" />
+										<label style="font-family: 'Source Sans Pro', sans-serif;" for="test5">Source Sans Pro</label>
+									</p>
+								</form>
+								
+							</div>
 						</div>
-
 						<div class="col s6">
 							<h5> Funzioni </h5>
 							<br>
 							<form action="#">
-								<p>
-									<input onclick="triggerEditorType()" type="checkbox" id="pyEditorCheckbox" />
-									<label for="pyEditorCheckbox">Editor Python</label>
-									<div id="editorSelect" class="input-field" style="display:none">
-										<select>
-											<option value="1" selected>Principiante</option>
-											<option value="2">Intermedio</option>
-											<option value="3">Controllo completo sulle API</option>
-										</select>
-										<label class="select-label">Livello dell'Editor</label>
+									<div class="row">
+										Editor Python
+										<div class="input-field inline">
+											<select>
+												<option value="1" selected>Disabilitato</option>
+												<option value="2">Base</option>
+												<option value="3">Intermedio</option>
+												<option value="4">Completo</option>
+											</select>
+											<label class="select-label"></label>
+										</div>
 									</div>
-								</p>
 								<p>
-									<input type="checkbox" id="intermediateCheckbox" />
-									<div  class="input-field">
+									
+									<div class="row">
+										Salva automaticamente
+										<div class="input-field inline">
+											<select>
+												<option value="1" selected>Mai (Disabilitato)</option>
+												<option value="2">Prima di ogni esecuzione</option>
+												<option value="3">Ogni Minuto</option>
+												<option value="4">Ogni 5 Minuti</option>
+												<option value="5">Ogni 30 Minuti</option>
+												<option value="6">Ogni Ora</option>
+											</select>
+											<label class="select-label"></label>
+										</div>
+									</div>
+									Aggiorna cronologia modifiche
+									<div class="input-field inline">
 										<select>
 											<option value="1" selected>Mai (Disabilitato)</option>
 											<option value="2">Prima di ogni esecuzione</option>
@@ -116,27 +162,16 @@
 											<option value="5">Ogni 30 Minuti</option>
 											<option value="6">Ogni Ora</option>
 										</select>
-										<label class="select-label">Aggiorna cronologia modifiche</label>
-									</div>
-									<div  class="input-field">
-										<select>
-											<option value="1" selected>Mai (Disabilitato)</option>
-											<option value="2">Prima di ogni esecuzione</option>
-											<option value="3">Ogni Minuto</option>
-											<option value="4">Ogni 5 Minuti</option>
-											<option value="5">Ogni 30 Minuti</option>
-											<option value="6">Ogni Ora</option>
-										</select>
-										<label class="select-label">Salva automaticamente</label>
+										<label class="select-label"></label>
 									</div>
 								</p>
 								<p>
 									<input type="checkbox" id="pyExportCheckbox" />
-									<label for="pyExportCheckbox">Permetti di visualizzare il codice Python generato</label>
+									<label for="pyExportCheckbox">Permetti di <b>visualizzare</b> il codice Python generato</label>
 								</p>
 								<p>
 									<input type="checkbox" id="pyEditCheckbox" />
-									<label for="pyEditCheckbox">Permetti di modificare il codice Python generato</label>
+									<label for="pyEditCheckbox">Permetti di <b>modificare</b> il codice Python generato</label>
 								</p>
 								
 							</form>
