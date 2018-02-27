@@ -5,21 +5,6 @@
 		<script type="text/javascript" src="interact.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.6.1/Sortable.min.js"></script>
 		<script type="text/javascript" src="editor.js"></script>
-		<script type="text/javascript">
-			$(document).ready(function() {
-				Materialize.updateTextFields();
-			$(".brand-logo").sideNav();
-			// Editable list
-		var editableList = Sortable.create(editable, {
-		filter: '.js-remove',
-		onFilter: function (evt) {
-			var el = editableList.closest(evt.item); // get dragged item
-			el && el.parentNode.removeChild(el);
-		}
-		});
-			
-			})
-		</script>
 		<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Source+Sans+Pro|Ubuntu" rel="stylesheet">
 	</head>
 	<body>
@@ -182,13 +167,7 @@
 				</div>
 				
 				<div id="toolbar" class="tab-content active">
-					<div class="col s6">
-						<div id="yes-drop" class="draggable drag-drop"> Salva </div>
-						<div id="yes-drop" class="draggable drag-drop"> Esegui</div>
-						<div id="yes-drop" class="draggable drag-drop"> Simula </div>
-						<div id="yes-drop" class="draggable drag-drop"> Aiuto </div>
-						<div id="inner-dropzone" class="dropzone">Trascina qui gli elementi da visualizzare nella barra superiore</div>
-					</div>
+					toolbar
 				</div>
 				
 				<div id="command" class="tab-content">
