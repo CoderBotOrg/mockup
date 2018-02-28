@@ -9,6 +9,7 @@ app.set('view engine', 'ejs');
 app.set('views', './html')
 
 app.use('/', express.static('html'))
+app.use('/node_modules', express.static('node_modules'))
 
 app.get('/', function (req, res) {
   res.render('index', {
