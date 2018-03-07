@@ -246,7 +246,7 @@
 					
 					<div id="toolbar" class="tab-content active">
 						<div id="yes-drop" class="draggable drag-drop"> <i class="material-icons">menu</i> </div>
-						<div id="yes-drop" class="draggable drag-drop"> Salva </div>
+						<div id="yes-drop" class="draggable drag-drop"> Salva <a style="color:white" class="modal-trigger" href="#modalSave"><i class="material-icons right">edit</i></a> </div>
 						<div id="yes-drop" class="draggable drag-drop"> Esegui</div>
 						<div id="yes-drop" class="draggable drag-drop"> Simula </div>
 						<div id="yes-drop" class="draggable drag-drop"> Aiuto </div>
@@ -376,6 +376,26 @@
       <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Applica</a>
     </div>
   </div>
-          	
+          
+    <div style=" width: 75% !important ; height: 75% !important ;" id="modalSave" class="modal">
+    <div class="modal-content">
+      <h4>Pulsante Toolbar "Salva"</h4>
+      <div class="container">
+  <div class="row">
+Aspetto del pulsante:<br>
+    <div class="input-field inline">
+    	
+      <label for="icon"></label>
+      <input type="text" class="use-material-icon-picker" value="android" name="icon">
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="modal-footer">
+    	<a href="#!" class="modal-action waves-effect waves-green btn-flat">Impostazioni Predefinite</a>
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Applica</a>
+    </div>
+  </div>	
+
 	</body>
 </html>
