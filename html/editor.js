@@ -2,6 +2,7 @@
       $('select').material_select();
       Materialize.updateTextFields();
       $(".brand-logo").sideNav();
+      $('.modal').modal();
   });
   
 interact('.draggable')
