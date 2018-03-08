@@ -9,22 +9,25 @@
 
           $('input[type="text"].use-material-icon-picker').each(function() {
               // Add the current icon as a prefix, and update when the field changes.
-              $(this).before('<i class="material-icons material-icon-picker-prefix prefix"></i>');
+              $(this).before('<i id="iconpick" class="material-icons material-icon-picker-prefix prefix"></i>');
               $(this).on('change keyup', function() {
+                  console.log("changed")
                   $(this).prev().text($(this).val());
               });
               $(this).prev().text($(this).val());
+
               // Append the picker and the search box.
               var $picker = $('<div class="material-icon-picker" tabindex="-1"></div>');
               var $search = $('<input type="text" placeholder="Search...">');
               // Do simple filtering based on the search.
-              $search.on('keyup', function() {
+              /*$search.on('keyup', function() {
                   var search = $search.val().toLowerCase();
                   var $icons = $(this).siblings('.icons');
                   $icons.find('i').css('display', 'none');
                   $icons.find('i:contains(' + search + ')').css('display', 'inline-block');
               });
-              $picker.append($search);
+              */
+              //$picker.append($search);
               // Append each icon into the picker.
               var $icons = $('<div class="icons"></div>');
 
@@ -43,7 +46,9 @@
               // Show the picker when the input field gets focus.
               $picker.append($icons).hide();
               $(this).after($picker);
-              $(this).on('focusin', function() {
+              var $icon = $('#iconpick');
+              $icon.on('click', function() {
+                  console.log("clicked the Icon")
                   $picker.fadeIn(200);
               });
           });
@@ -58,6 +63,8 @@
 
 
   });
+  
+
 
   interact('.draggable')
       .draggable({
