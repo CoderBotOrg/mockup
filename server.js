@@ -13,19 +13,19 @@ app.use('/node_modules', express.static('node_modules'))
 
 app.get('/', function (req, res) {
   res.render('index', {
-  	title: "Index"
+  	title: "Indice"
   })
 })
 
 app.get('/editor', function (req, res) {
   res.render('editor', {
-  	title: "Editor"
+  	title: "Modifica Attività"
   })
 })
 
 app.get('/settings', function (req, res) {
   res.render('settings', {
-  	title: "Settings"
+  	title: "Impostazioni"
   })
 })
 
