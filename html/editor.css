@@ -8,6 +8,9 @@ code {
   font-family: "Inconsolata"
   size: 2em;
 }
+.side-nav li > a {
+  font-size: 16px;
+}
 
 .tab {
   font-weight: bold;
@@ -120,18 +123,10 @@ input {
 }
 
 .tabs .tab a {
-  font-size: 20px;
+  font-size: 16px;
   
 }
 
-.tabs .tab a:hover, .tabs .tab a.active {
-
-}
-
-.tabs .tab a.active {
-  
-  
-}
 .tab-content {
   font-size: 22px;
 }
