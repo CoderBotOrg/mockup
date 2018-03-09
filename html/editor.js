@@ -20,14 +20,14 @@
               var $picker = $('<div class="material-icon-picker" tabindex="-1"></div>');
               var $search = $('<input type="text" placeholder="Search...">');
               // Do simple filtering based on the search.
-              /*$search.on('keyup', function() {
+              $search.on('keyup', function() {
                   var search = $search.val().toLowerCase();
                   var $icons = $(this).siblings('.icons');
                   $icons.find('i').css('display', 'none');
                   $icons.find('i:contains(' + search + ')').css('display', 'inline-block');
               });
-              */
-              //$picker.append($search);
+              
+              $picker.append($search);
               // Append each icon into the picker.
               var $icons = $('<div class="icons"></div>');
 
@@ -51,6 +51,11 @@
                   console.log("clicked the Icon")
                   $picker.fadeIn(200);
               });
+              $(this).on('click', function() {
+                  console.log("clicked the label")
+                  $picker.fadeIn(200);
+              });
+
           });
           // Hide any picker when it or the input field loses focus.
           $(document).on('mouseup', function(e) {
