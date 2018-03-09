@@ -5,7 +5,8 @@
       $('.modal').modal();
       $('#mycp').colorpicker({
         container: '#cpicker',
-        inline: true,
+        align: 'right',
+        
         extensions: [
         {
           name: 'swatches',
