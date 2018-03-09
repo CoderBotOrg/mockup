@@ -6,8 +6,10 @@
 		<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.6.1/Sortable.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.6.1/Sortable.min.js"></script>
 		<script type="text/javascript" src="editor.js"></script>
+		<script type="text/javascript" src="bootstrap-colorpicker.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Source+Sans+Pro|Ubuntu" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Inconsolata|PT+Mono|Roboto+Mono" rel="stylesheet">
+		<link href="bootstrap-colorpicker.css" rel="stylesheet">
 	</head>
 	<body>
 		<% include sidemenu.ejs %>
@@ -403,6 +405,11 @@
 							<input placeholder="Salva" id="buttonLabel" type="text" class="validate">
 							<label for="buttonLabel">Etichetta testuale</label>
 						</div>
+					</div>
+					<div class="row">
+						<div id="cpicker" class="input-field col">
+						<input id="mycp" type="text" class="form-control" />
+					</div>
 					</div>
 				
 			</div>
